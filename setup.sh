@@ -1,5 +1,7 @@
 #!/bin/bash
 
+CUR_DIR=$PWD
+
 echo "This script will overwrite your current $HOME/.vimrc and $HOME/.vim plugins"
 read -r -p "Are you sure? [y/N] " response
 case $response in
@@ -9,7 +11,7 @@ case $response in
         mkdir -p $HOME/.vim
         git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 
-        cp $HOME/vim-settings/.vimrc $HOME/
+        cp $CUR_DIR/.vimrc $HOME/
 
         echo "vim setup in $HOME/.vimrc, plugins in $HOME/.vim"
         ;;

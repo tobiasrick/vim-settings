@@ -15,6 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'vim-scripts/a.vim'
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'vim-scripts/winmanager'
@@ -40,6 +41,8 @@ filetype plugin indent on    " required
 
 " WINDOWS & MINGW32
 ":set makeprg=mingw32-make
+" WINDOWS & Visual Studio
+":set makeprg=nmake
 
 syntax on "enable syntax highlighting
 set ts=2 "set tab stops to n chars
@@ -64,4 +67,7 @@ set hidden "allow unsaved buffers
 filetype on "enable filetype detection
 filetype plugin on "enable file specific plugins
 set autoread "automatically read files that have been changed externally
+
+"F12 to toggle between implementation and header
+map <f12> <esc>:A<cr> 
 
