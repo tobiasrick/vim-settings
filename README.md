@@ -8,12 +8,10 @@
 cd $HOME
 git clone https://github.com/tobiasrick/vim-settings.git
 cd vim-settings
-./win-setup.sh
+./setup.sh
 ```
 
-- open gvim (on Windows: add to path if necessary)
-
-- within gvim, install plugins:
+- open vim/gvim and install plugins:
 
 ```
 <ESC>:PluginInstall
